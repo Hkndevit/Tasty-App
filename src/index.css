@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/font/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../public/font/Inter-VariableFont_slnt\wght.ttf);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,4 +16,23 @@
 
 image {
   max-width: 100%;
+}
+
+/** Colors: */
+:root {
+  /* Brand Color */
+  --Color1: #70b9be;
+  --Color2: #353535;
+
+  /* Accent */
+  --Color3: #3ca0a7;
+  --Color4: #c7e3e5;
+
+  /* Greyscale */
+  --Color5: #0a2533;
+  --Color6: #48525f;
+  --Color7: #97a2b0;
+  --Color8: #cbd4de;
+  --Color9: #f1f5f5;
+  --Color10: #ffffff;
 }
