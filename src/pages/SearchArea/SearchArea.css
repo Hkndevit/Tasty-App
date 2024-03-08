@@ -1,0 +1,68 @@
+.search-area-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+}
+
+/* ! Filter */
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 3.25rem;
+}
+
+.filter__data-container {
+  display: flex;
+  gap: 0.25rem;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+/* Chrome, Safari und Opera: Browser Scrollbar ausblenden */
+.filter__data-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter__data-container {
+  /* Internet Explorer und Edge: Browser Scrollbar ausblenden*/
+  -ms-overflow-style: none;
+  /* Firefox: Browser Scrollbar ausblenden*/
+  scrollbar-width: none;
+}
+
+.filter__data {
+  color: var(--Color10);
+  background-color: var(--Color1);
+  padding: 0.5625rem 24px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* ! Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid__item {
+  padding: 0.5rem;
+  box-shadow: 0 0 0.3rem var(--Color8);
+  border-radius: 10px;
+}
+
+.grid__item__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid__item__text {
+  font-size: 0.75rem;
+  text-align: center;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  /* overflow: scroll; */
+}

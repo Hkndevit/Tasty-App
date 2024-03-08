@@ -5,7 +5,7 @@
 }
 
 .footer__nav {
-  /* # Ggf. noch einen Box-Shadow einbauen, falls sich der Footer nicht vom Rest des Contents abgebt */
+  filter: drop-shadow(0 0 0.1rem var(--Color8));
   background-color: var(--Color10);
   display: flex;
   justify-content: space-around;
