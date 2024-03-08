@@ -14,10 +14,6 @@
   margin: 0;
 }
 
-image {
-  max-width: 100%;
-}
-
 /** Colors: */
 :root {
   /* Brand Color */
@@ -35,4 +31,12 @@ image {
   --Color8: #cbd4de;
   --Color9: #f1f5f5;
   --Color10: #ffffff;
+}
+
+html {
+  font-family: Montserrat;
+}
+
+image {
+  max-width: 100%;
 }
