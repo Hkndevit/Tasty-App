@@ -11,20 +11,23 @@ const Categories = () => {
   }, []);
 
   return (
-    <section>
-      <h2>Categories</h2>
-      <p>See All</p>
-
-      {catego ? (
-        catego.categories.map((singleCatego, index) => (
-          <div key={index}>
-            <img src={singleCatego.strCategoryThumb} alt="" />
-            <p>{singleCatego.strCategory}</p>
-          </div>
-        ))
-      ) : (
-        <p>loading..</p>
-      )}
+    <section className="categories">
+      <div className="categories_see-all">
+        <h2>Categories</h2>
+        <p>See All</p>
+      </div>
+      <article>
+        {catego ? (
+          catego.categories.map((singleCatego, index) => (
+            <div className="categories__content" key={index}>
+              <img src={singleCatego.strCategoryThumb} alt="" />
+              <p>{singleCatego.strCategory}</p>
+            </div>
+          ))
+        ) : (
+          <p>loading..</p>
+        )}
+      </article>
     </section>
   );
 };
