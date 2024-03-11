@@ -48,6 +48,7 @@
 }
 
 .grid__item {
+  all: unset;
   padding: 0.5rem;
   box-shadow: 0 0 0.3rem var(--Color8);
   border-radius: 10px;
@@ -61,8 +62,4 @@
 .grid__item__text {
   font-size: 0.75rem;
   text-align: center;
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-  /* white-space: nowrap; */
-  /* overflow: scroll; */
 }

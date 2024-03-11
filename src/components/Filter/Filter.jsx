@@ -1,5 +1,6 @@
 import './Filter'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Filter = ({ data }) => {
   const [area, setArea] = useState('American')
@@ -37,7 +38,8 @@ const Filter = ({ data }) => {
         {meal.meals ? (
           meal.meals.map((item) => {
             return (
-              <div
+              <Link
+                to={`/details/${item.idMeal}`}
                 className="grid__item"
                 key={item.idMeal}>
                 <img
@@ -46,7 +48,7 @@ const Filter = ({ data }) => {
                   alt={item.strMeal}
                 />
                 <p className="grid__item__text">{item.strMeal}</p>
-              </div>
+              </Link>
             )
           })
         ) : (
