@@ -25,8 +25,7 @@ const SearchArea = () => {
         <h1>SearchArea</h1>
         <SearchHeadline />
         <Search />
-        {/* Temporär Filter Home => dann in Home Page */}
-        <FilterHome />
+
         <Filter data={area} itemFilter='strArea' />
       </div>
       <Navigation />
