@@ -3,15 +3,20 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const Filter = ({ data, itemFilter }) => {
+  // Area Data
   const [singleArea, setSingleArea] = useState('American')
   const [mealArea, setMealArea] = useState([])
+  const [filteredAreaMeals, setFilteredAreaMeals] = useState([])
 
+  // Category Data
   const [singleCategory, setSingleCategory] = useState('Vegetarian')
   const [mealCategory, setMealCategory] = useState([])
+  const [filteredCategoryMeals, setFilteredCategoryMeals] = useState([])
 
+  // User Input
   const [userInput, setUserInput] = useState('')
-  const [filteredMeals, setFilteredMeals] = useState([])
 
+  // Location Information
   const location = useLocation()
   const { pathname } = location
 
@@ -29,7 +34,7 @@ const Filter = ({ data, itemFilter }) => {
     ).then((res) => res.json().then((data) => setMealCategory(data)))
   }, [singleCategory])
 
-  // Get filtered Meals
+  // Get filtered Meals by Area
   useEffect(() => {
     const filter = mealArea.meals
       ? mealArea.meals.filter((item) => {
@@ -37,11 +42,23 @@ const Filter = ({ data, itemFilter }) => {
         })
       : ''
 
-    setFilteredMeals(filter)
+    setFilteredAreaMeals(filter)
+  }, [userInput])
+
+  // Get filtered Meals by Category
+  useEffect(() => {
+    const filter = mealCategory.meals
+      ? mealCategory.meals.filter((item) => {
+          return item.strMeal.toLowerCase().includes(userInput)
+        })
+      : ''
+
+    setFilteredCategoryMeals(filter)
   }, [userInput])
 
   return (
     <>
+      {/* Formular zur Abfrage des User Inputs */}
       <form
         onSubmit={(e) => e.preventDefault()}
         className='Home__Search'
@@ -107,8 +124,8 @@ const Filter = ({ data, itemFilter }) => {
       {/* Render Filterd Meals per Area after User Input */}
       {userInput.length !== 0 && pathname === '/search/area' && (
         <section className='grid'>
-          {filteredMeals ? (
-            filteredMeals.map((item) => {
+          {filteredAreaMeals ? (
+            filteredAreaMeals.map((item) => {
               return (
                 <Link
                   to={`/details/${item.idMeal}`}
@@ -130,9 +147,52 @@ const Filter = ({ data, itemFilter }) => {
       )}
 
       {/* Render Meals per Category */}
-      {pathname === '/search/category' && (
+      {userInput.length === 0 && pathname === '/search/category' && (
         <section className='grid'>
-          {mealCategory.meals ? <p>Test</p> : <p>Loading...</p>}
+          {mealCategory.meals ? (
+            mealCategory.meals.map((item) => {
+              return (
+                <Link
+                  to={`/details/${item.idMeal}`}
+                  className='grid__item'
+                  key={item.idMeal}>
+                  <img
+                    className='grid__item__image'
+                    src={item.strMealThumb}
+                    alt={item.strMeal}
+                  />
+                  <p className='grid__item__text'>{item.strMeal}</p>
+                </Link>
+              )
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
+        </section>
+      )}
+
+      {/* Render Filterd Meals per Category after User Input */}
+      {userInput.length !== 0 && pathname === '/search/category' && (
+        <section className='grid'>
+          {filteredCategoryMeals ? (
+            filteredCategoryMeals.map((item) => {
+              return (
+                <Link
+                  to={`/details/${item.idMeal}`}
+                  className='grid__item'
+                  key={item.idMeal}>
+                  <img
+                    className='grid__item__image'
+                    src={item.strMealThumb}
+                    alt={item.strMeal}
+                  />
+                  <p className='grid__item__text'>{item.strMeal}</p>
+                </Link>
+              )
+            })
+          ) : (
+            <p>Loading...</p>
+          )}
         </section>
       )}
     </>

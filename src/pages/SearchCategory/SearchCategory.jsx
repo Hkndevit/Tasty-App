@@ -19,7 +19,6 @@ const SearchCategory = () => {
     <main>
       <h1>SearchCategory</h1>
       <SearchHeadline />
-      <Search />
       <Filter data={category} itemFilter='strCategory' />
       <Navigation />
     </main>
