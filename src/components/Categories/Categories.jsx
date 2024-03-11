@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Categories.css";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [catego, setCatego] = useState();
@@ -16,18 +17,20 @@ const Categories = () => {
         <h2>Categories</h2>
         <p>See All</p>
       </div>
-      <article>
-        {catego ? (
-          catego.categories.map((singleCatego, index) => (
-            <div className="categories__content" key={index}>
-              <img src={singleCatego.strCategoryThumb} alt="" />
-              <p>{singleCatego.strCategory}</p>
-            </div>
-          ))
-        ) : (
-          <p>loading..</p>
-        )}
-      </article>
+      <Link to="/search/category">
+        <article>
+          {catego ? (
+            catego.categories.map((singleCatego, index) => (
+              <div className="categories__content" key={index}>
+                <img src={singleCatego.strCategoryThumb} alt="" />
+                <p>{singleCatego.strCategory}</p>
+              </div>
+            ))
+          ) : (
+            <p>loading..</p>
+          )}
+        </article>
+      </Link>
     </section>
   );
 };
