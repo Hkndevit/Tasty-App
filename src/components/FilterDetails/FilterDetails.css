@@ -1,0 +1,60 @@
+/* ! Filter-Buttons */
+.filter-details div {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--Color9);
+  border-radius: 1rem;
+  margin-bottom: 1.0625rem;
+}
+
+.filter-details div p {
+  margin: 0.3125rem 0;
+  padding: 0.75rem 1.875rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  background-color: #042628;
+  color: var(--Color10);
+  cursor: pointer;
+}
+
+/* ! Show and hide ingredients and instructions */
+.filter-details__instructions {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* ! gefetchte Texte für ingredients */
+.filter-details__ingredients h3 {
+  margin-bottom: 1.5rem;
+}
+
+.filter-details__ingredients p {
+  box-shadow: 0 0 0.3rem var(--Color8);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ! gefetchte Texte für instructions */
+
+.filter-details__instructions h3 {
+  margin-bottom: 1.5rem;
+}
+
+.filter-details__instructions p {
+  color: var(--Color7);
+  padding: 1rem;
+  box-shadow: 0 0 0.3rem var(--Color8);
+  border-radius: 1rem;
+  line-height: 145%;
+}
