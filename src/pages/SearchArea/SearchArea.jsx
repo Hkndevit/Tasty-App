@@ -24,7 +24,7 @@ const SearchArea = () => {
         <h1>SearchArea</h1>
         <SearchHeadline />
         <Search />
-        <Filter data={area} />
+        <Filter data={area} itemFilter='strArea' />
       </div>
       <Navigation />
     </main>
