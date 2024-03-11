@@ -33,13 +33,13 @@
   display: none;
 }
 
-.categories .categories_see-all {
+.categories .categories__see-all {
   display: flex;
   justify-content: space-between;
   margin-inline: 1.5rem;
 }
 
-.categories .categories_see-all p {
+.categories .categories__see-all p {
   font-size: 0.875rem;
   color: var(--Color1);
   font-weight: bold;

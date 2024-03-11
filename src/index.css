@@ -1,11 +1,11 @@
 @font-face {
   font-family: Montserrat;
-  src: url(../public/font/Montserrat-VariableFont_wght.ttf);
+  src: url(/font/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: Inter;
-  src: url(../public/font/Inter-VariableFont_slnt\wght.ttf);
+  src: url(/font/Inter-VariableFont_slnt\wght.ttf);
 }
 
 * {

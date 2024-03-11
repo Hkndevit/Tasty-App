@@ -12,7 +12,7 @@ const Categories = () => {
 
   return (
     <section className="categories">
-      <div className="categories_see-all">
+      <div className="categories__see-all">
         <h2>Categories</h2>
         <p>See All</p>
       </div>
