@@ -12,6 +12,7 @@ const Onboarding = () => {
       <div className="onboarding__allRecipe">
         <h1>All recipe you needed</h1>
         <p>5000+ healthy recipes made by people for your healthy life</p>
+        {/* <Link  to="/">Get Started</Link> noch unten in a hinzufügen */}
         <a href="">Get Started</a>
       </div>
     </section>
