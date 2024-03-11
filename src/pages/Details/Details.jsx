@@ -10,11 +10,16 @@ const Details = () => {
   // state für gefetchte Daten:
   const [detail, setDetail] = useState();
 
-  // Link auslesen, damit wir ihn im fetch-Link nutzen können:
-  const { id } = useParams();
-  console.log(id);
+  // Variable mit leerem Array, um die Ingredients dort hinein zu pushen:
+  let ingredients = [];
+  let measures = [];
 
-  // Fetchen der Daten und speichern im state detail:
+  // dynamisches Link-Ende auslesen, damit wir ihn im fetch-Link nutzen können:
+  const { id } = useParams();
+  // console.log(id);
+  // console.log(detail);
+
+  // Fetchen der Daten und speichern im state namens detail:
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((res) => res.json())
@@ -22,7 +27,47 @@ const Details = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(detail);
+  // Funktion zum Filtern der Daten nach Ingredients und null-Inhalte rausfiltern:
+  const getIngredients = () => {
+    for (let item in detail.meals[0]) {
+      if (item.includes("strIngredient")) {
+        // console.log(item);
+        if (
+          typeof detail.meals[0][item] != "string" ||
+          detail.meals[0][item] === ""
+        ) {
+          return;
+        } else {
+          ingredients.push(detail.meals[0][item]);
+          // console.log(ingredients);
+        }
+      }
+    }
+  };
+
+  // Funktionsaufruf für ingredients, aber nur, wenn in detail-state die Daten bereits enthalten sind:
+  detail ? getIngredients() : console.log("ingredient geht nicht");
+
+  // Funktion zum Filtern der Daten nach Measures und null-Inhalte rausfiltern:
+  const getMeasures = () => {
+    for (let item in detail.meals[0]) {
+      if (item.includes("strMeasure")) {
+        console.log(item);
+        if (
+          typeof detail.meals[0][item] != "string" ||
+          detail.meals[0][item] === ""
+        ) {
+          return;
+        } else {
+          measures.push(detail.meals[0][item]);
+          console.log(measures);
+        }
+      }
+    }
+  };
+
+  // Funktionsaufruf für mesasures, aber nur, wenn in detail-state die Daten bereits enthalten sind:
+  detail ? getMeasures() : console.log("measures geht nicht");
 
   return (
     <main>
@@ -41,14 +86,8 @@ const Details = () => {
               </div>
               <FilterDetails
                 instructions={detail.meals[0].strInstructions}
-                ingredient1={detail.meals[0].strIngredient1}
-                ingredient2={detail.meals[0].strIngredient2}
-                ingredient3={detail.meals[0].strIngredient3}
-                ingredient4={detail.meals[0].strIngredient4}
-                ingredient5={detail.meals[0].strIngredient5}
-                ingredient6={detail.meals[0].strIngredient6}
-                ingredient7={detail.meals[0].strIngredient7}
-                ingredient8={detail.meals[0].strIngredient8}
+                ingredients={ingredients}
+                measures={measures}
               />
             </div>
           </div>
