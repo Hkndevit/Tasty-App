@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation/Navigation'
 import SearchHeadline from '../../components/SearchHeadline/SearchHeadline'
 import Search from '../../components/Search/Search'
 import { useEffect, useState } from 'react'
+import { FilterHome } from '../../components/FilterHome/FilterHome'
 
 const SearchArea = () => {
   const [area, setArea] = useState([])
@@ -24,6 +25,8 @@ const SearchArea = () => {
         <h1>SearchArea</h1>
         <SearchHeadline />
         <Search />
+        {/* Temporär Filter Home => dann in Home Page */}
+        <FilterHome />
         <Filter data={area} itemFilter='strArea' />
       </div>
       <Navigation />

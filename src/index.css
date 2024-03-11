@@ -40,3 +40,9 @@ html {
 image {
   max-width: 100%;
 }
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--Color5);
+}
