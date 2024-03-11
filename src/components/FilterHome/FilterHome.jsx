@@ -1,9 +1,12 @@
 import './FilterHome.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { areaContext } from '../../context/Context'
 import { Link } from 'react-router-dom'
 
 export const FilterHome = () => {
   const [area, setArea] = useState([])
+
+  const { setAreaValue } = useContext(areaContext)
 
   useEffect(() => {
     fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list').then(
@@ -15,18 +18,24 @@ export const FilterHome = () => {
     )
   }, [])
 
+  const getAreaContent = (e) => {
+    setAreaValue(e.target.textContent)
+  }
+
   return (
     <section className='filter filter__home'>
       <div className='filter__home__heading-container'>
         <h2>Areas</h2>
-        <p>See all</p>
+        <Link to='/search/area' className='filter__home__link'>
+          See all
+        </Link>
       </div>
       <article className='filter__data-container'>
         {area.meals ? (
           area.meals.map((item, index) => {
             return (
               <Link to='/search/area' className='filter__data' key={index}>
-                {item.strArea}
+                <span onClick={getAreaContent}>{item.strArea}</span>
               </Link>
             )
           })

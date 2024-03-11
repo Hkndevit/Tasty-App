@@ -7,13 +7,15 @@ import { SearchHome } from '../../components/SearchHome/SearchHome'
 
 const Home = () => {
   return (
-    <main className='home'>
-      <SearchHome />
-      <Random />
-      <FilterHome />
-      <Categories />
-      <Navigation />
-    </main>
+    <>
+      <main>
+        <SearchHome />
+        <Random />
+        <FilterHome />
+        <Categories />
+        <Navigation />
+      </main>
+    </>
   )
 }
 
