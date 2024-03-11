@@ -1,5 +1,6 @@
 import './FilterHome.css'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export const FilterHome = () => {
   const [area, setArea] = useState([])
@@ -24,9 +25,9 @@ export const FilterHome = () => {
         {area.meals ? (
           area.meals.map((item, index) => {
             return (
-              <div className='filter__data' key={index}>
+              <Link to='/search/area' className='filter__data' key={index}>
                 {item.strArea}
-              </div>
+              </Link>
             )
           })
         ) : (
