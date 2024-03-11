@@ -1,0 +1,59 @@
+.random {
+  background-color: var(--Color10);
+  padding: 20px;
+}
+.random__meal {
+  padding-bottom: 20px;
+}
+.random__card {
+  background-image: url(/public/images/Card_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  width: 95%;
+  height: 230px;
+  margin-top: 10px;
+}
+.random__foodPic {
+  display: flex;
+  justify-content: end;
+}
+.random__foodPic img {
+  width: 150px;
+  z-index: 1;
+}
+.random__wrapper p {
+  display: flex;
+  align-items: center;
+}
+.random__h1 {
+  color: var(--Color10);
+  width: 50vw;
+  margin-left: 20px;
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
+.randomLink {
+  text-decoration: none;
+  color: var(--Color10);
+}
+.random__cardText {
+  color: var(--Color9);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 30px;
+}
+.circle {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-left: -10px;
+}
+.random__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  color: var(--Color9);
+}
