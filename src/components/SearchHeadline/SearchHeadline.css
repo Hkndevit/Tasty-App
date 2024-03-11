@@ -1,0 +1,10 @@
+.search-headline {
+  display: flex;
+  align-items: center;
+  padding-block: 32px;
+}
+
+.search-headline__centered {
+  flex-grow: 1;
+  text-align: center;
+}

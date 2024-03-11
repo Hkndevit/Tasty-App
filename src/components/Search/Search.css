@@ -17,9 +17,6 @@
   color: var(--Color7);
   font-size: 1rem;
 }
-.Home__Search:focus {
-  outline: none;
-}
 
 .Home__Search input:focus {
   outline: none;
