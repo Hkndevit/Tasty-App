@@ -1,3 +1,7 @@
+.filter__home {
+  padding-inline: 1.5rem;
+}
+
 .filter__home__heading-container {
   display: flex;
   align-items: center;

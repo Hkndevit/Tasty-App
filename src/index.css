@@ -46,3 +46,7 @@ h2 {
   font-weight: 700;
   color: var(--Color5);
 }
+
+body {
+  padding-block-end: 20rem;
+}

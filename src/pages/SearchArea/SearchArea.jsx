@@ -2,10 +2,7 @@ import './SearchArea.css'
 import Filter from '../../components/Filter/Filter'
 import Navigation from '../../components/Navigation/Navigation'
 import SearchHeadline from '../../components/SearchHeadline/SearchHeadline'
-import Search from '../../components/Search/Search'
 import { useEffect, useState } from 'react'
-import { FilterHome } from '../../components/FilterHome/FilterHome'
-
 const SearchArea = () => {
   const [area, setArea] = useState([])
 
@@ -24,8 +21,6 @@ const SearchArea = () => {
       <div className='search-area-wrapper'>
         <h1>SearchArea</h1>
         <SearchHeadline />
-        <Search />
-
         <Filter data={area} itemFilter='strArea' />
       </div>
       <Navigation />

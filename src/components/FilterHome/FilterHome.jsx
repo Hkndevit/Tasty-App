@@ -15,7 +15,7 @@ export const FilterHome = () => {
   }, [])
 
   return (
-    <section className='filter'>
+    <section className='filter filter__home'>
       <div className='filter__home__heading-container'>
         <h2>Areas</h2>
         <p>See all</p>
