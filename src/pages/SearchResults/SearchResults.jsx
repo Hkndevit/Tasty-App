@@ -24,8 +24,6 @@ const SearchResults = () => {
       .catch((err) => console.log(err));
   }, [userInput]);
 
-  // console.log(inputData);
-
   return (
     <main>
       <SearchHeadline />
@@ -41,6 +39,7 @@ const SearchResults = () => {
         />
       </form>
 
+      {/* //* Start-Bild: */}
       <div
         className={`search__img-container ${
           userInput ? "search__img-container--hide" : ""
@@ -51,21 +50,23 @@ const SearchResults = () => {
 
       {/* //* Search-Output: */}
       <article className="search__output">
-        {userInput != null && inputData.meals ? (
+        {userInput !== null && userInput !== "" && inputData.meals ? (
           inputData.meals.map((item, index) => (
             <article key={index}>
-              <img
-                className="search__output--img"
-                src={item.strMealThumb}
-                alt={item.strMeal}
-              />
-              <div>
-                <h4>{item.strMeal}</h4>
-                <p>
-                  <img src="/images/circle.svg" alt="circle" />
-                  {item.strCategory}
-                </p>
-              </div>
+              <section>
+                <img
+                  className="search__output--img"
+                  src={item.strMealThumb}
+                  alt={item.strMeal}
+                />
+                <div>
+                  <h4>{item.strMeal}</h4>
+                  <p>
+                    <img src="/images/circle.svg" alt="circle" />
+                    {item.strCategory}
+                  </p>
+                </div>{" "}
+              </section>
               <Link to={`/details/${item.idMeal}`}>
                 <img
                   src="/images/Arrow Right - Small.svg"

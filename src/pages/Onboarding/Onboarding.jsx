@@ -11,8 +11,8 @@ const Onboarding = () => {
       </div>
 
       <div className="onboarding__allRecipe">
-        <h1>All recipe you needed</h1>
-        <p>5000+ healthy recipes made by people for your healthy life</p>
+        <h1>All the recipes you need</h1>
+        <p>5000+ recipes made by people for your healthy life</p>
         <Link to="/home">Get Started</Link>
       </div>
     </section>

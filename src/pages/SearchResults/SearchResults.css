@@ -1,25 +1,32 @@
+/* ! Startseite */
 .search__img-container {
-  background-color: var(--Color1);
   display: flex;
   justify-content: center;
-  border-radius: 50%;
-  margin: 0 1.25rem;
+  border-radius: 100%;
+
   margin-top: 10%;
+}
+
+.search__img-container img {
+  background-color: var(--Color1);
+  border-radius: 100%;
 }
 
 .search__img-container--hide {
   display: none;
 }
 
+/* ! Suchergebnisse */
 .search__output {
   margin-bottom: 7rem;
 }
 
+/* geflexter allgemeiner Output-Container um img, Text und Link */
 .search__output article {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
 
   box-shadow: 0 0 0.3rem var(--Color8);
   border-radius: 1rem;
@@ -28,8 +35,15 @@
   margin: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
+/* geflexter Containter um output-img und Text */
+.search__output section {
+  display: flex;
+  gap: 20px;
+
+  align-items: center;
+}
+
 .search__output--img {
-  width: 40%;
   height: 10.625rem;
   object-fit: cover;
 }

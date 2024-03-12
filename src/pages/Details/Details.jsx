@@ -43,7 +43,7 @@ const Details = () => {
   };
 
   //* Funktionsaufruf für ingredients, aber nur, wenn in detail-state die Daten bereits enthalten sind:
-  detail ? getIngredients() : console.log("ingredient geht nicht");
+  detail ? getIngredients() : console.log("Loading ingredients");
 
   //* Funktion zum Filtern der Daten nach Measures und null-Inhalte rausfiltern:
   const getMeasures = () => {
@@ -62,19 +62,21 @@ const Details = () => {
   };
 
   //* Funktionsaufruf für mesasures, aber nur, wenn in detail-state die Daten bereits enthalten sind:
-  detail ? getMeasures() : console.log("measures geht nicht");
+  detail ? getMeasures() : console.log("Loading measures");
 
   return (
     <main>
       <section className="details">
         {detail ? (
           <div>
-            <img
+            <svg
               onClick={() => navigate(-1)}
               className="details--img__arrow"
-              src="/images/Arrow - Left.svg"
-              alt="arrow to the left"
-            />
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
             <img
               className="details--img__food"
               src={detail.meals[0].strMealThumb}
@@ -96,8 +98,7 @@ const Details = () => {
         ) : (
           <p>Laden ...</p>
         )}
-      </section>
-
+      </section>{" "}
       <Navigation />
     </main>
   );

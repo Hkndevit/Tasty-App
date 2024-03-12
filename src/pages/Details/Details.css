@@ -3,22 +3,25 @@
 }
 
 .details--img__arrow {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding: 1.25rem;
   cursor: pointer;
+  fill: var(--Color5);
+  filter: drop-shadow(0 0 3px var(--Color10));
+  width: 3.75rem;
 }
 
 .details--img__food {
-  width: 100vw;
+  width: 100%;
 }
 
 .details__textblock {
   margin-top: -1.25rem;
   border-radius: 1.25rem;
   background-color: var(--Color10);
-  width: 100vw;
+  width: 100%;
 
   position: absolute;
   top: 70%;
