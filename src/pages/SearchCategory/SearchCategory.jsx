@@ -1,8 +1,7 @@
 import './SearchCategory.css'
 import Navigation from '../../components/Navigation/Navigation'
 import SearchHeadline from '../../components/SearchHeadline/SearchHeadline'
-import Search from '../../components/Search/Search'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import Filter from '../../components/Filter/Filter'
 
 const SearchCategory = () => {

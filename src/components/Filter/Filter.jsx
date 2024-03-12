@@ -1,7 +1,7 @@
 import './Filter'
 import { useEffect, useState, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { areaContext } from '../../context/Context'
+import { areaContext, categoryContext } from '../../context/Context'
 
 const Filter = ({ data, itemFilter }) => {
   // Area Data
@@ -23,6 +23,7 @@ const Filter = ({ data, itemFilter }) => {
 
   // useContext
   const { areaValue, setAreaValue } = useContext(areaContext)
+  const { categoryValue, setCategoryValue } = useContext(categoryContext)
 
   // Get the Meals for the Specific Area
   useEffect(() => {
@@ -40,9 +41,11 @@ const Filter = ({ data, itemFilter }) => {
   // Get the Meals for the Specific Category
   useEffect(() => {
     fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${singleCategory}`
+      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${
+        categoryValue.length !== 0 ? categoryValue : singleCategory
+      }`
     ).then((res) => res.json().then((data) => setMealCategory(data)))
-  }, [singleCategory])
+  }, [singleCategory, categoryValue])
 
   // Get filtered Meals by Area
   useEffect(() => {
@@ -91,9 +94,10 @@ const Filter = ({ data, itemFilter }) => {
                 <div
                   // Get Specific Area Name and Save it as SingleArea State
                   onClick={(e) => {
-                    setAreaValue('')
                     setSingleArea(e.target.textContent)
                     setSingleCategory(e.target.textContent)
+                    setAreaValue('')
+                    setCategoryValue('')
                   }}
                   className='filter__data'
                   key={index}>
