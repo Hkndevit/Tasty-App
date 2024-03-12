@@ -10,9 +10,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  width: 95%;
-  height: 230px;
+  /* height: 230px; */
+
   margin-top: 10px;
+  overflow: hidden;
 }
 .random__foodPic {
   display: flex;
@@ -57,6 +58,7 @@
   margin-right: 30px;
   color: var(--Color9);
   margin-top: 30px;
+  padding-bottom: 1.25rem;
 }
 .random__infoZeile {
   display: flex;

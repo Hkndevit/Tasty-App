@@ -1,3 +1,13 @@
+.categories a {
+  text-decoration: none;
+  color: var(--Color5);
+}
+
+.categories__see-all a {
+  color: var(--Color1);
+  font-weight: 600;
+}
+
 .categories .categories__content img {
   height: 8rem;
   width: 10.5rem;

@@ -8,7 +8,6 @@
   src: url(/font/Inter-VariableFont_slnt\wght.ttf);
 }
 
-/* # Search global stylen, weil wir sie auch auf den Search-Seiten nutzen */
 /* # Home/Search3x: margin links/rechts: 24px margin oben: 60px */
 /* # Home margin-bottom, damit man bis unten scrollen kann - oder nav ein margin-top geben? */
 /* # Detailpage: nur Inhalte margin links/rechts: 24px */
@@ -68,7 +67,6 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
 }
 /* Home Meal of the Day + Areas + Campaign */
 /* Detailpage Ingredients- und Instructions-Headline */
@@ -77,3 +75,28 @@ h4 {
   font-size: 1rem;
 }
 /* SearchResults Meal-Namen */
+
+/* ! Search-Komponente */
+.Home__Search input {
+  border-style: none;
+  font-size: 1rem;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  width: 100%;
+}
+.Home__Search {
+  display: flex;
+
+  border: 1px solid var(--Color4);
+  border-radius: 20px;
+  margin-inline: 1.5rem;
+  padding-inline: 1.5rem;
+}
+.Home__Search::placeholder {
+  color: var(--Color7);
+  font-size: 1rem;
+}
+
+.Home__Search input:focus {
+  outline: none;
+}

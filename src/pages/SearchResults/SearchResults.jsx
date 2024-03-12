@@ -1,7 +1,6 @@
 import "./SearchResults.css";
 import Navigation from "../../components/Navigation/Navigation";
 import SearchHeadline from "../../components/SearchHeadline/SearchHeadline";
-import Search from "../../components/Search/Search";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 

@@ -1,3 +1,7 @@
 .home__search {
   text-decoration: none;
 }
+
+.home__search form {
+  margin-bottom: 1rem;
+}
