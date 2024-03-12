@@ -8,10 +8,6 @@
   src: url(/font/Inter-VariableFont_slnt\wght.ttf);
 }
 
-/* # Home/Search3x: margin links/rechts: 24px margin oben: 60px */
-/* # Home margin-bottom, damit man bis unten scrollen kann - oder nav ein margin-top geben? */
-/* # Detailpage: nur Inhalte margin links/rechts: 24px */
-
 /* # genereller Wrapper mit max-width */
 /* .wrapper {
   max-width: 375px;

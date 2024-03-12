@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Onboarding.css";
 
 const Onboarding = () => {
@@ -12,8 +13,7 @@ const Onboarding = () => {
       <div className="onboarding__allRecipe">
         <h1>All recipe you needed</h1>
         <p>5000+ healthy recipes made by people for your healthy life</p>
-        {/* <Link  to="/">Get Started</Link> noch unten in a hinzufügen */}
-        <a href="/">Get Started</a>
+        <Link to="/home">Get Started</Link>
       </div>
     </section>
   );
