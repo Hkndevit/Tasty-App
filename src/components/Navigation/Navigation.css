@@ -1,7 +1,10 @@
 .footer {
   position: fixed;
   bottom: 0;
+  left: 52%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 450px;
 }
 
 .footer__nav {

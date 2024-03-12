@@ -9,10 +9,14 @@
 }
 
 /* # genereller Wrapper mit max-width */
-/* .wrapper {
-  max-width: 375px;
+.wrapper {
+  max-width: 450px;
   width: 100vw;
   margin: 0 auto;
+}
+
+/* body {
+  background-color: var(--Color1);
 } */
 
 * {

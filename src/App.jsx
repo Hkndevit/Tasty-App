@@ -26,17 +26,19 @@ function App() {
     <categoryContext.Provider value={{ categoryValue, setCategoryValue }}>
       <areaContext.Provider value={{ setAreaValue, areaValue }}>
         {loading ? (
-          <BrowserRouter>
-            <Routes>
-              <Route path="/loading" element={<Loading />} />
-              <Route path="/" element={<Onboarding />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/search/area" element={<SearchArea />} />
-              <Route path="/search/category" element={<SearchCategory />} />
-              <Route path="/search/results" element={<SearchResults />} />
-              <Route path="/details/:id" element={<Details />} />
-            </Routes>
-          </BrowserRouter>
+          <div className="wrapper">
+            <BrowserRouter>
+              <Routes>
+                <Route path="/loading" element={<Loading />} />
+                <Route path="/" element={<Onboarding />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/search/area" element={<SearchArea />} />
+                <Route path="/search/category" element={<SearchCategory />} />
+                <Route path="/search/results" element={<SearchResults />} />
+                <Route path="/details/:id" element={<Details />} />
+              </Routes>
+            </BrowserRouter>
+          </div>
         ) : (
           <Loading />
         )}

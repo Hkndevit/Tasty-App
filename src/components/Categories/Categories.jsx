@@ -22,7 +22,7 @@ const Categories = () => {
     <section className="categories">
       <div className="categories__see-all">
         <h3>Categories</h3>
-        <Link to="search/category" className="categories__see-all__link">
+        <Link to="/search/category" className="categories__see-all__link">
           See all
         </Link>
       </div>

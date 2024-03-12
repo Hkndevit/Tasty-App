@@ -68,6 +68,7 @@
   padding: 0.5rem;
   box-shadow: 0 0 0.3rem var(--Color8);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .grid__item__image {
