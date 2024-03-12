@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import "./Random.css";
+import { useState, useEffect } from "react";
 
 const Random = () => {
-  const [random, setRandom] = useState();
-  useEffect(() => {
-    fetch("www.themealdb.com/api/json/v1/1/random.php")
-      .then((respo) => respo.json())
-      .then((data) => setCatego(data))
-      .catch((err) => console.error("Fehler im Code", err));
-  }, []);
+  // const [random, setRandom] = useState();
+  // useEffect(() => {
+  //   fetch("www.themealdb.com/api/json/v1/1/random.php")
+  //     .then((respo) => respo.json())
+  //     .then((data) => setRandom(data))
+  //     .catch((err) => console.error("Fehler im Code", err));
+  // }, []);
+  // console.log(random);
 
   return (
     <section className="random">
@@ -21,7 +23,7 @@ const Random = () => {
         </div>
         <div className="random__h1">
           <Link className="randomLink" to="/details/52895">
-            <h1>Full English Breakfast</h1>
+            {/* <h1>Full English Breakfast</h1> */}
           </Link>
         </div>
 
@@ -39,9 +41,9 @@ const Random = () => {
                 d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
               />{" "}
             </svg>
-            <p>Breakfast</p>
+            {/* <p>Breakfast</p> */}
           </div>
-          <p>British</p>
+          {/* <p>British</p> */}
         </div>
       </div>
     </section>
