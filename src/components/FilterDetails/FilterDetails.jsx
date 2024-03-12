@@ -5,8 +5,6 @@ import "./FilterDetails.css";
 const FilterDetails = (props) => {
   //* state dafür, welcher Button getoggelt ist (instructions oder ingredients):
   const [theme, setTheme] = useState(false);
-  // console.log(props.instructions);
-  // console.log(props.ingredient);
 
   //* Funktion für onclick:
   const changeTheme = () => {

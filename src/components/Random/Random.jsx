@@ -10,7 +10,6 @@ const Random = () => {
       .then((data) => setRandom(data))
       .catch((err) => console.error("Fehler im Code", err));
   }, []);
-  console.log(random);
 
   return (
     <section className="random">

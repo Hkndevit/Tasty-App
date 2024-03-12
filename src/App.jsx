@@ -16,8 +16,6 @@ function App() {
   const [categoryValue, setCategoryValue] = useState("");
   const [loading, setLoading] = useState(false);
 
-  console.log(loading);
-
   useEffect(() => {
     setTimeout(() => setLoading(true), 2000);
   }, []);
