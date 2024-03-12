@@ -3,6 +3,7 @@ import Filter from '../../components/Filter/Filter'
 import Navigation from '../../components/Navigation/Navigation'
 import SearchHeadline from '../../components/SearchHeadline/SearchHeadline'
 import { useEffect, useState } from 'react'
+
 const SearchArea = () => {
   const [area, setArea] = useState([])
 

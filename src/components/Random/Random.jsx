@@ -7,10 +7,9 @@ const Random = () => {
   // useEffect(() => {
   //   fetch("www.themealdb.com/api/json/v1/1/random.php")
   //     .then((respo) => respo.json())
-  //     .then((data) => setRandom(data))
+  //     .then((data) => setCatego(data))
   //     .catch((err) => console.error("Fehler im Code", err));
   // }, []);
-  // console.log(random);
 
   return (
     <section className="random">

@@ -1,0 +1,44 @@
+.search-output article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  box-shadow: 0 0 0.3rem var(--Color8);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  margin: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.search-output__img {
+  width: 40%;
+  height: 10.625rem;
+  object-fit: cover;
+}
+
+.search-output div {
+  padding: 0.5rem 0;
+}
+
+.search-output div h3 {
+  color: var(--Color5);
+  margin-bottom: 0.5rem;
+  line-height: 135%;
+  font-size: 1rem;
+}
+
+.search-output div p {
+  color: var(--Color7);
+  font-size: 0.875rem;
+}
+
+.search-output div p img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.search-output a img {
+  width: 1.5rem;
+  margin-right: 1rem;
+}
