@@ -11,6 +11,10 @@
   display: none;
 }
 
+.search__output {
+  margin-bottom: 7rem;
+}
+
 .search__output article {
   display: flex;
   align-items: center;
