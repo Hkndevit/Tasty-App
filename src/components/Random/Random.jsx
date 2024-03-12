@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "./Random.css";
 
 const Random = () => {
-  const [random, setRandom] = useState();
-  useEffect(() => {
-    fetch("www.themealdb.com/api/json/v1/1/random.php")
-      .then((respo) => respo.json())
-      .then((data) => setCatego(data))
-      .catch((err) => console.error("Fehler im Code", err));
-  }, []);
+  // const [random, setRandom] = useState();
+  // useEffect(() => {
+  //   fetch("www.themealdb.com/api/json/v1/1/random.php")
+  //     .then((respo) => respo.json())
+  //     .then((data) => setCatego(data))
+  //     .catch((err) => console.error("Fehler im Code", err));
+  // }, []);
 
   return (
     <section className="random">

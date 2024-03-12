@@ -5,7 +5,7 @@ import "./FilterDetails.css";
 const FilterDetails = (props) => {
   //* state dafür, welcher Button getoggelt ist (instructions oder ingredients):
   const [theme, setTheme] = useState(false);
-  console.log(props.instructions);
+  // console.log(props.instructions);
   // console.log(props.ingredient);
 
   //* Funktion für onclick:
@@ -39,12 +39,13 @@ const FilterDetails = (props) => {
       {/* //* je nach state hide- und show-classes hinzufügen: */}
       <article className={`filter-details__ingredients ${theme ? "hide" : ""}`}>
         <h3>Ingredients</h3>
-        {/* //* mit Props über ingredient-array mappen, um die Inhalte aus dem Fetch von Details rendern: */}
+        {/* //* mit Props über ingredients-array mappen, um die Inhalte aus dem Fetch von Details rendern: */}
+        {/* -> darin können wir dann auch die props.measures ansprechen */}
         <article>
-          {props.measures.map((item, index) => (
+          {props.ingredients.map((item, index) => (
             <section key={index}>
+              <p>{props.measures[index]}</p>
               <p>{item}</p>
-              <p>{props.ingredients[index]}</p>
             </section>
           ))}
         </article>
@@ -57,7 +58,7 @@ const FilterDetails = (props) => {
       >
         {/* //* mit den Props die Inhalte aus dem Fetch von Details rendern: */}
         <h3>Instructions</h3>
-        {/* //# Absätze aus array im HTML rendern? */}
+        {/* //# Absätze aus array im HTML gleich rendern? */}
         <p>{props.instructions}</p>
       </article>
     </section>
