@@ -9,13 +9,28 @@
   margin-block-end: 0.75rem;
 }
 
-.filter__home__heading-container p {
+.filter__home__link {
   color: var(--Color1);
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .filter__data-container a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+.filter__data__home {
+  padding: 0.5625rem 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--Color9);
+  color: var(--Color5);
+}
+
+.filter__data__home:first-of-type {
+  color: var(--Color10);
+  background-color: var(--Color1);
 }
