@@ -34,7 +34,10 @@ export const FilterHome = () => {
         {area.meals ? (
           area.meals.map((item, index) => {
             return (
-              <Link to='/search/area' className='filter__data' key={index}>
+              <Link
+                to='/search/area'
+                className='filter__data__home'
+                key={index}>
                 <span onClick={getAreaContent}>{item.strArea}</span>
               </Link>
             )

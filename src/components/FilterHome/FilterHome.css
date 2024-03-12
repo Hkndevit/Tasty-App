@@ -21,3 +21,16 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.filter__data__home {
+  padding: 0.5625rem 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--Color9);
+  color: var(--Color5);
+}
+
+.filter__data__home:first-of-type {
+  color: var(--Color10);
+  background-color: var(--Color1);
+}
