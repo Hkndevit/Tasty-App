@@ -1,4 +1,17 @@
-.search-output article {
+.search__img-container {
+  background-color: var(--Color1);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 1.25rem;
+  margin-top: 10%;
+}
+
+.search__img-container--hide {
+  display: none;
+}
+
+.search__output article {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,34 +24,33 @@
   margin: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
-.search-output__img {
+.search__output--img {
   width: 40%;
   height: 10.625rem;
   object-fit: cover;
 }
 
-.search-output div {
+.search__output div {
   padding: 0.5rem 0;
 }
 
-.search-output div h3 {
+.search__output div h4 {
   color: var(--Color5);
   margin-bottom: 0.5rem;
   line-height: 135%;
-  font-size: 1rem;
 }
 
-.search-output div p {
+.search__output div p {
   color: var(--Color7);
   font-size: 0.875rem;
 }
 
-.search-output div p img {
+.search__output div p img {
   vertical-align: middle;
   margin-right: 0.5rem;
 }
 
-.search-output a img {
+.search__output a img {
   width: 1.5rem;
   margin-right: 1rem;
 }

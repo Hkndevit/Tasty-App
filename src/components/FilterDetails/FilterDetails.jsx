@@ -58,7 +58,6 @@ const FilterDetails = (props) => {
       >
         {/* //* mit den Props die Inhalte aus dem Fetch von Details rendern: */}
         <h3>Instructions</h3>
-        {/* //# Absätze aus array im HTML gleich rendern? */}
         <p>{props.instructions}</p>
       </article>
     </section>

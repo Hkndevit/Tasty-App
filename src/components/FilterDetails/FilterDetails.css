@@ -19,13 +19,13 @@
 
 /* ! change Button-colors, je nachdem, welcher aktiv ist */
 .filter-details__p-black {
-  background-color: #042628;
+  background-color: var(--Color5);
   color: var(--Color10);
 }
 
 .filter-details__p-white {
   background-color: none;
-  color: #042628;
+  color: var(--Color5);
 }
 
 /* ! toggle ingredients and instructions */
@@ -79,5 +79,7 @@
   padding: 1rem;
   box-shadow: 0 0 0.3rem var(--Color8);
   border-radius: 1rem;
-  line-height: 145%;
+  line-height: 160%;
+
+  white-space: pre-wrap;
 }

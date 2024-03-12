@@ -8,10 +8,30 @@
   src: url(/font/Inter-VariableFont_slnt\wght.ttf);
 }
 
+/* # Search global stylen, weil wir sie auch auf den Search-Seiten nutzen */
+/* # Home/Search3x: margin links/rechts: 24px margin oben: 60px */
+/* # Home margin-bottom, damit man bis unten scrollen kann - oder nav ein margin-top geben? */
+/* # Detailpage: nur Inhalte margin links/rechts: 24px */
+
+/* # genereller Wrapper mit max-width */
+/* .wrapper {
+  max-width: 375px;
+  width: 100vw;
+  margin: 0 auto;
+} */
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-family: Montserrat;
+}
+
+image {
+  max-width: 100%;
 }
 
 /** Colors: */
@@ -33,16 +53,27 @@
   --Color10: #ffffff;
 }
 
-html {
-  font-family: Montserrat;
+h1 {
+  font-size: 1.75rem;
 }
-
-image {
-  max-width: 100%;
-}
+/* Onboarding: All recipes you need */
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--Color5);
 }
+/* Detailpage Meal-Name */
+/* SearchHeadline */
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+/* Home Meal of the Day + Areas + Campaign */
+/* Detailpage Ingredients- und Instructions-Headline */
+
+h4 {
+  font-size: 1rem;
+}
+/* SearchResults Meal-Namen */

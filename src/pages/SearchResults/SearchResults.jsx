@@ -42,18 +42,26 @@ const SearchResults = () => {
         />
       </form>
 
+      <div
+        className={`search__img-container ${
+          userInput ? "search__img-container--hide" : ""
+        }`}
+      >
+        <img src="/images/boarding-logo.png" alt="" />
+      </div>
+
       {/* //* Search-Output: */}
-      <article className="search-output">
+      <article className="search__output">
         {userInput != null && inputData.meals ? (
-          inputData.meals.map((item) => (
-            <article>
+          inputData.meals.map((item, index) => (
+            <article key={index}>
               <img
-                className="search-output__img"
+                className="search__output--img"
                 src={item.strMealThumb}
                 alt={item.strMeal}
               />
               <div>
-                <h3>{item.strMeal}</h3>
+                <h4>{item.strMeal}</h4>
                 <p>
                   <img src="/images/circle.svg" alt="circle" />
                   {item.strCategory}
