@@ -10,7 +10,7 @@ const Filter = ({ data, itemFilter }) => {
   const [filteredAreaMeals, setFilteredAreaMeals] = useState([])
 
   // Category Data
-  const [singleCategory, setSingleCategory] = useState('Vegetarian')
+  const [singleCategory, setSingleCategory] = useState('Beef')
   const [mealCategory, setMealCategory] = useState([])
   const [filteredCategoryMeals, setFilteredCategoryMeals] = useState([])
 
@@ -31,11 +31,7 @@ const Filter = ({ data, itemFilter }) => {
       `https://www.themealdb.com/api/json/v1/1/filter.php?a=${
         areaValue.length !== 0 ? areaValue : singleArea
       }`
-    ).then((res) =>
-      res.json().then((data) => {
-        setMealArea(data)
-      })
-    )
+    ).then((res) => res.json().then((data) => setMealArea(data)))
   }, [singleArea, areaValue])
 
   // Get the Meals for the Specific Category
@@ -101,13 +97,12 @@ const Filter = ({ data, itemFilter }) => {
                   }}
                   // className='filter__data'
                   className={
-                    item[itemFilter] === singleArea
+                    item[itemFilter] === singleArea ||
+                    item[itemFilter] === singleCategory
                       ? 'filter__data filter__data--active'
                       : 'filter__data '
                   }
                   key={index}>
-                  {/* {item[itemFilter]} */}
-                  {/* {console.log(item.strArea)} */}
                   {item[itemFilter]}
                 </div>
               )
