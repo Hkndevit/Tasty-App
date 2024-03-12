@@ -6,7 +6,7 @@
   padding-bottom: 20px;
 }
 .random__card {
-  background-image: url(/public/images/Card_2.png);
+  background-image: url(/images/Card_2.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;

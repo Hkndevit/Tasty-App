@@ -61,4 +61,5 @@
   color: var(--Color10);
   margin-bottom: 2.625rem;
   font-weight: bold;
+  cursor: pointer;
 }
