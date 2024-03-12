@@ -35,7 +35,7 @@ const Filter = ({ data, itemFilter }) => {
         setMealArea(data)
       })
     )
-  }, [singleArea])
+  }, [singleArea, areaValue])
 
   // Get the Meals for the Specific Category
   useEffect(() => {
@@ -91,7 +91,6 @@ const Filter = ({ data, itemFilter }) => {
                 <div
                   // Get Specific Area Name and Save it as SingleArea State
                   onClick={(e) => {
-                    // # Was ist hier los?
                     setAreaValue('')
                     setSingleArea(e.target.textContent)
                     setSingleCategory(e.target.textContent)
