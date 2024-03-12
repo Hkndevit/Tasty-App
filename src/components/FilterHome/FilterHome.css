@@ -1,5 +1,5 @@
 .filter__home {
-  padding-inline: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 .filter__home__heading-container {
@@ -15,6 +15,7 @@
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
+  padding-inline-end: 1.5rem;
 }
 
 .filter__data-container a {
