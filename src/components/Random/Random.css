@@ -26,10 +26,10 @@
   display: flex;
   align-items: center;
 }
-.random__h1 {
+.random__h4 {
   color: var(--Color10);
   width: 50vw;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: -50px;
   margin-bottom: 10px;
 }
@@ -49,11 +49,17 @@
   border: 1px solid white;
   border-radius: 20px;
   margin-right: 5px;
-  margin-left: -10px;
+  margin-left: -20px;
 }
 .random__wrapper {
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
   color: var(--Color9);
+  margin-top: 30px;
+}
+.random__infoZeile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
