@@ -25,6 +25,22 @@ const Filter = ({ data, itemFilter }) => {
   const { areaValue, setAreaValue } = useContext(areaContext)
   const { categoryValue, setCategoryValue } = useContext(categoryContext)
 
+  // Toggler for Areas/Categories Colors
+  const [toggleAreaColor, setToggleAreaColor] = useState(false)
+  const [toggleCategoryColor, setToggleCategoryColor] = useState(false)
+
+  useEffect(() => {
+    areaValue.length !== 0
+      ? setToggleAreaColor(true)
+      : setToggleAreaColor(false)
+  }, [areaValue])
+
+  useEffect(() => {
+    categoryValue.length !== 0
+      ? setToggleCategoryColor(true)
+      : setToggleCategoryColor(false)
+  }, [categoryValue])
+
   // Get the Meals for the Specific Area
   useEffect(() => {
     fetch(
@@ -97,8 +113,12 @@ const Filter = ({ data, itemFilter }) => {
                   }}
                   // className='filter__data'
                   className={
-                    item[itemFilter] === singleArea ||
-                    item[itemFilter] === singleCategory
+                    (item[itemFilter] === singleArea &&
+                      toggleAreaColor === false) ||
+                    (item[itemFilter] === singleCategory &&
+                      toggleCategoryColor === false) ||
+                    (item[itemFilter] === areaValue && toggleAreaColor) ||
+                    (item[itemFilter] === categoryValue && toggleCategoryColor)
                       ? 'filter__data filter__data--active'
                       : 'filter__data '
                   }
