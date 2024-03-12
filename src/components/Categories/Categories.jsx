@@ -22,7 +22,9 @@ const Categories = () => {
     <section className='categories'>
       <div className='categories__see-all'>
         <h2>Categories</h2>
-        <p>See All</p>
+        <Link to='search/category' className='categories__see-all__link'>
+          See All
+        </Link>
       </div>
       <Link to='/search/category'>
         <article onClick={getCatValue}>

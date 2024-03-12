@@ -44,3 +44,11 @@
   color: var(--Color1);
   font-weight: bold;
 }
+
+.categories__see-all__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--Color1);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
