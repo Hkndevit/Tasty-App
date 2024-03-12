@@ -99,8 +99,15 @@ const Filter = ({ data, itemFilter }) => {
                     setAreaValue('')
                     setCategoryValue('')
                   }}
-                  className='filter__data'
+                  // className='filter__data'
+                  className={
+                    item[itemFilter] === singleArea
+                      ? 'filter__data filter__data--active'
+                      : 'filter__data '
+                  }
                   key={index}>
+                  {/* {item[itemFilter]} */}
+                  {/* {console.log(item.strArea)} */}
                   {item[itemFilter]}
                 </div>
               )
