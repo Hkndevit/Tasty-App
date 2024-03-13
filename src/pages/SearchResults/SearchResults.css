@@ -43,11 +43,13 @@
   align-items: center;
 }
 
+/* Essensbild */
 .search__output--img {
-  height: 10.625rem;
+  width: 50%;
   object-fit: cover;
 }
 
+/* Container um Text */
 .search__output div {
   padding: 0.5rem 0;
 }
@@ -63,11 +65,13 @@
   font-size: 0.875rem;
 }
 
+/* grüner Kreis */
 .search__output div p img {
   vertical-align: middle;
   margin-right: 0.5rem;
 }
 
+/* Pfeil */
 .search__output a img {
   width: 1.5rem;
   margin-right: 1rem;
